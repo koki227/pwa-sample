@@ -1,12 +1,18 @@
 <template>
-  <v-form @submit="signIn">
-    <v-text-field v-model="email" label="メール" type="email" />
-    <v-text-field v-model="password" label="パスワード" type="password" />
-    <v-btn type="submit" class="ma-2" outlined color="indigo">
-      Outlined Button
-    </v-btn>
-    {{ email }}/{{ password }}
-  </v-form>
+  <div>
+    <h1>ログイン</h1>
+    <v-form @submit="signIn">
+      <v-text-field v-model="email" label="メール" type="email" />
+      <v-text-field v-model="password" label="パスワード" type="password" />
+      <v-btn type="submit" class="ma-2" outlined color="indigo">
+        Outlined Button
+      </v-btn>
+      {{ email }}/{{ password }}
+    </v-form>
+    <nuxt-link to="/signup">
+      アカウントを作成する
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
